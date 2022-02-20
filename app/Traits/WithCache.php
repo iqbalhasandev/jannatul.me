@@ -119,4 +119,23 @@ trait WithCache
             Cache::forget(self::$cacheKey . $cacheKey);
         }
     }
+
+    /**
+     * The "booted" method of the model.
+     *
+     * @return void
+     */
+    protected static function booted()
+    {
+        static::created(function ($data) {
+            $data->forgetCache();
+        });
+
+        static::updated(function ($data) {
+            $data->forgetCache();
+        });
+        static::deleted(function ($data) {
+            $data->forgetCache();
+        });
+    }
 }
