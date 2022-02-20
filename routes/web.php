@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PortfolioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,11 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PortfolioController::class, 'index'])->name('portfolio');
+Route::post('/', [PortfolioController::class, 'contactStore'])->name('portfolio.contact');
 
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('/blog/{post}', [PortfolioController::class, 'blog'])->name('portfolio.blog.show');

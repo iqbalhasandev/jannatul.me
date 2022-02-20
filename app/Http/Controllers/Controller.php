@@ -7,7 +7,15 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 
+use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
+
+
 class Controller extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests, SEOToolsTrait;
+
+    public function __construct()
+    {
+        config_set('theme.cdata.back', \back_url());
+    }
 }

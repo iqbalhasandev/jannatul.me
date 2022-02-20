@@ -5,5 +5,5 @@
     @method('Delete')
 </form>
 {{-- @push('extra-scripts') --}}
-<script src="{{admin_asset('js/delete.js')}}"></script>
+<script src="{{front_asset('js/delete.js')}}"></script>
 {{-- @endpush --}}
