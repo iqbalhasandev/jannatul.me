@@ -5,7 +5,7 @@
         data-image-src="{{ Voyager::image(setting('portfolio.hero_background_image')) }}"
         style="width: 900px;height:600px">
         <div class="cta mx-auto mt-2 scrollspy">
-            <h1 class="mt-0 mb-4">I’m {{ setting('portfolio.full_name') }}<span class="dot"></span></h1>
+            <h1 class="mt-0 mb-4">I’m {{ setting('portfolio.nick_name') }}<span class="dot"></span></h1>
             <p class="mb-4">{{ setting('portfolio.bio') }}</p>
             <a href="#about" class="btn btn-default btn-lg mr-3 scrollspy"><i class="icon-grid"></i>About Me</a>
             <div class="spacer d-md-none d-lg-none d-sm-none" data-height="10"></div>
@@ -145,7 +145,7 @@
                 </div>
                 <div class="body">
                     <h4 class="mt-0">{{ $experience->title }}</h4>
-                    <p>{{ $experience->description }}</p>
+                    <p>{!! $experience->description !!}</p>
                 </div>
             </div>
             @endforeach
@@ -238,7 +238,8 @@
         <div class="spacer" data-height="80"></div>
 
         <div class="row">
-            @foreach ($portfolio['posts'] as $post)
+
+            @forelse ($portfolio['posts'] as $post)
             <div class="col-md-4">
                 <!-- blog item -->
                 <div class="blog-item">
@@ -259,7 +260,9 @@
                     </ul>
                 </div>
             </div>
-            @endforeach
+            @empty
+            <div class="col-md-12 mt-5 text-center text-muted">No Post Found..</div>
+            @endforelse
 
         </div>
 

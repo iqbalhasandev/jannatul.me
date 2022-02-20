@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class PortfolioContact extends Model
 {
     use HasFactory, WithCache;
+    protected static $cacheKey = '__portfolio_contact__';
 
     protected $fillable = [
         'name',

@@ -32,9 +32,9 @@
             </button>
             <a href="{{ route('portfolio') }}" class="logo">
                 <img src="{{ Voyager::image(setting('portfolio.mobile_menu_image')) }}"
-                    alt="{{ setting('portfolio.full_name') }}" style="width: 120px;height: 120px;border-radius: 5px;" />
+                    style="width: 120px;height: 120px;border-radius: 5px;" />
             </a>
-            <a href="{{ route('portfolio') }}" class="site-title dot ml-2">{{ setting('portfolio.full_name') }}</a>
+            <a href="{{ route('portfolio') }}" class="site-title dot ml-2">{{ setting('portfolio.nick_name') }}</a>
         </div>
 
         <!-- header -->
@@ -46,7 +46,7 @@
                 <a href="{{ route('portfolio') }}"><img
                         src="{{ Voyager::image(setting('portfolio.mobile_menu_image')) }}"
                         style="width: 120px;height: 120px;border-radius: 5px;" /></a>
-                <a href="{{ route('portfolio') }}" class="site-title dot mt-3">{{ setting('portfolio.full_name') }}</a>
+                <a href="{{ route('portfolio') }}" class="site-title dot mt-3">{{ setting('portfolio.nick_name') }}</a>
                 <span class="site-slogan">{{ setting('portfolio.designation') }}</span>
 
                 <!-- navigation menu -->
@@ -106,7 +106,9 @@
                     </ul>
 
                     <!-- copyright -->
-                    <span class="copyright">© {{ date('Y').setting('portfolio.full_name') }}</span>
+                    <span class="copyright">© {{ date('Y')}}<span style="font-size: 18px">💝</span>{{
+                        setting('portfolio.full_name')
+                        }}</span>
                 </div>
             </div>
         </header>

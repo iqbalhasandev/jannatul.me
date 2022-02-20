@@ -11,10 +11,15 @@ class Post extends TcgPost
 {
     use HasFactory, WithCache;
 
-    protected static $cacheKey = '__category__';
+    protected static $cacheKey = '__post__';
+
+    protected static $cacheRelationshipKeys = [
+        'category' => Category::class,
+        'author' => User::class
+    ];
 
 
-    public function Category()
+    public function category()
     {
         return $this->belongsTo(Category::class);
     }
