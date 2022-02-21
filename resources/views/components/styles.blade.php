@@ -3,7 +3,6 @@
 <link rel="stylesheet" href="{{ front_asset('css/all.min.css')}}" type="text/css" media="all">
 <link rel="stylesheet" href="{{ front_asset('css/simple-line-icons.min.css')}}" type="text/css" media="all">
 <link rel="stylesheet" href="{{ front_asset('css/slick.min.css')}}" type="text/css" media="all">
-<link rel="stylesheet" href="{{ front_asset('css/simplebar.min.css')}}" type="text/css" media="all">
 <link rel="stylesheet" href="{{ front_asset('css/jquery.mCustomScrollbar.min.css')}}" type="text/css" media="all">
 @stack('lib-styles')
 <link rel="stylesheet" href="{{ front_asset('css/style.min.css')}}" type="text/css" media="all">
@@ -23,7 +22,7 @@
     }
 
     :root {
-        --primary: {{setting('portfolio.portfolio_primary_color', '#6d6e74') }}
+        --primary: {{  setting('portfolio.portfolio_primary_color', '#6d6e74')}}
 
         ;
     }

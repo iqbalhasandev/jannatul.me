@@ -3,13 +3,15 @@
     <!-- section hero -->
     <section class="hero background parallax shadow-dark d-flex align-items-center" id="home"
         data-image-src="{{ Voyager::image(setting('portfolio.hero_background_image')) }}"
-        style="width: 900px;height:600px">
+        style="max-width: 900px;max-height:600px">
         <div class="cta mx-auto mt-2 scrollspy">
             <h1 class="mt-0 mb-4">I’m {{ setting('portfolio.nick_name') }}<span class="dot"></span></h1>
             <p class="mb-4">{{ setting('portfolio.bio') }}</p>
-            <a href="#about" class="btn btn-default btn-lg mr-3 scrollspy"><i class="icon-grid"></i>About Me</a>
+            <a href="#about" class="btn btn-default btn-lg mr-3 scrollspy" data-scroll="#about"><i
+                    class="icon-grid"></i>About Me</a>
             <div class="spacer d-md-none d-lg-none d-sm-none" data-height="10"></div>
-            <a href="#contact" class="btn btn-border-light btn-lg scrollspy"><i class="icon-envelope"></i>Contact me</a>
+            <a href="#contact" class="btn btn-border-light btn-lg scrollspy" data-scroll="#contact"><i
+                    class="icon-envelope"></i>Contact me</a>
         </div>
         <div class="overlay"></div>
     </section>
@@ -46,7 +48,8 @@
                     Download CV
                 </a>
                 @endif
-                <a href="#contact" class="btn btn-alt mt-2 mt-md-0 mt-xs-2"><i class="icon-envelope"></i>Hire
+                <a href="#contact" class="btn btn-alt mt-2 mt-md-0 mt-xs-2" data-scroll="#contact"><i
+                        class="icon-envelope"></i>Hire
                     me</a>
             </div>
         </div>
@@ -248,7 +251,7 @@
                             <span class="category">{{ $post->category->name??'' }}</span>
                         </a>
                         <a href="{{ route('portfolio.blog.show',$post->id) }}">
-                            <img src="{{ Voyager::image($post->image) }}" style="width: 800;height:350px" />
+                            <img src="{{ Voyager::image($post->image) }}" style="max-width: 800;max-height:350px" />
                         </a>
                     </div>
                     <h4 class="mt-4 mb-0"><a href="{{ route('portfolio.blog.show',$post->id) }}">{{ $post->title

@@ -14,5 +14,7 @@
 <script src="{{front_asset('js/contact.js')}}"></script>
 <script src="{{front_asset('js/validator.js')}}"></script>
 <script src="{{front_asset('js/custom.js')}}"></script>
+<script src="{{front_asset('js/activenav.min.js')}}"></script>
+
 
 @stack('extra-scripts')

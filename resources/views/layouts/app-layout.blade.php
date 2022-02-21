@@ -52,14 +52,44 @@
                 <!-- navigation menu -->
                 <nav>
                     <ul class="vertical-menu scrollspy">
-                        <li><a href="{{ route('portfolio') }}#home" class="active"><i class="icon-home"></i>Home</a>
+                        <li><a href="{{ route('portfolio') }}#home" class="active" data-scroll="#home">
+                                <i class="icon-home"></i>
+                                Home
+                            </a>
                         </li>
-                        <li><a href="{{ route('portfolio') }}#about"><i class="icon-user"></i>About</a></li>
-                        <li><a href="{{ route('portfolio') }}#services"><i class="icon-bulb"></i>Services</a></li>
-                        <li><a href="{{ route('portfolio') }}#resume"><i class="icon-graduation"></i>Resume</a></li>
-                        <li><a href="{{ route('portfolio') }}#works"><i class="icon-grid"></i>Works</a></li>
-                        <li><a href="{{ route('portfolio') }}#blog"><i class="icon-pencil"></i>Blog</a></li>
-                        <li><a href="{{ route('portfolio') }}#contact"><i class="icon-phone"></i>Contact</a></li>
+                        <li>
+                            <a href="{{ route('portfolio') }}#about" data-scroll="#about">
+                                <i class="icon-user"></i>
+                                About
+                            </a>
+                        </li>
+                        <li><a href="{{ route('portfolio') }}#services" data-scroll="#services">
+                                <i class="icon-bulb"></i>
+                                Services
+                            </a>
+                        </li>
+                        <li><a href="{{ route('portfolio') }}#resume" data-scroll="#resume">
+                                <i class="icon-graduation"></i>
+                                Resume
+                            </a>
+                        </li>
+                        <li><a href="{{ route('portfolio') }}#works" data-scroll="#works">
+                                <i class="icon-grid"></i>
+                                Works
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('portfolio') }}#blog" data-scroll="#blog">
+                                <i class="icon-pencil"></i>
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('portfolio') }}#contact" data-scroll="#contact">
+                                <i class="icon-phone"></i>
+                                Contact
+                            </a>
+                        </li>
                     </ul>
                 </nav>
 
