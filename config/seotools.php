@@ -44,11 +44,7 @@ return [
             'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => 'Portfolio',
             'site_name'   => env('APP_NAME', 'Jannatul Ferdus Nizhum'),
-            'images'      => [
-                env('APP_URL') . 'admin-assets/images/logo-dark.png',
-                env('APP_URL') . 'admin-assets/images/logo-light.png',
-                env('APP_URL') . 'admin-assets/images/logo-sm.png',
-            ],
+            'images'      => [],
         ],
     ],
     'twitter' => [
@@ -69,11 +65,7 @@ return [
             'description' => 'Hello I\'m Jannatul Ferdus Nizhum. I am a content creator, diploma computer engineer, business development intern. I like to learn and teach about new technologies and I like to work on different topics of technology.', // set false to total remove
             'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => 'WebPage',
-            'images'      => [
-                env('APP_URL') . 'admin-assets/images/logo-dark.png',
-                env('APP_URL') . 'admin-assets/images/logo-light.png',
-                env('APP_URL') . 'admin-assets/images/logo-sm.png',
-            ],
+            'images'      => [],
         ],
     ],
 ];
