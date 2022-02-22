@@ -23,7 +23,8 @@
 
         <div class="row">
             <div class="col-md-3">
-                <img src="{{ Voyager::image(setting('portfolio.about_me_section_image')) }}" />
+                <img src="{{ Voyager::image(setting('portfolio.about_me_section_image')) }}"
+                    style="border-radius:5px;" />
             </div>
             <div class="col-md-9">
                 <h2 class="mt-4 mt-md-0 mb-4">Hello,</h2>
@@ -235,6 +236,34 @@
 
         </div>
     </section>
+
+    <!-- section clients -->
+    <section id="clients" class="shadow-dark background-blue color-white padding-50">
+
+        <h3 class="section-title">Youtube Content</h3>
+        <div class="spacer" data-height="80"></div>
+
+        <!-- clients wrapper -->
+        <div class="clients-wrapper row">
+
+            @foreach ($portfolio['youtubeContents'] as $youtubeContent)
+            <div class="col-md-12">
+                <!-- client item -->
+                <div class="client-item">
+                    <iframe style="
+    width: 100%;
+    height: 400px;
+" src="{{ $youtubeContent->url }}" title="{{ $youtubeContent->title }}" % frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            @endforeach
+
+        </div>
+
+    </section>
+
     <!-- section blog -->
     <section id="blog" class="shadow-blue white-bg padding">
         <h3 class="section-title">Recent posts</h3>

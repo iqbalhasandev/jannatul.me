@@ -19,7 +19,6 @@
                                 </a>
                             </strong>
                         </em>
-                        @endif
                     </p>
                     <a class="btn btn-info mt-3" href="{{ back_url() }}">
                         <i class="mdi mdi-reply mr-1"></i>

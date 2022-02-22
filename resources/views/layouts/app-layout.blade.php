@@ -31,8 +31,7 @@
                 <span></span>
             </button>
             <a href="{{ route('portfolio') }}" class="logo">
-                <img src="{{ Voyager::image(setting('portfolio.mobile_menu_image')) }}"
-                    style="width: 120px;height: 120px;border-radius: 5px;" />
+                <img src="{{ Voyager::image(setting('portfolio.mobile_menu_image')) }}" style="border-radius: 5px;" />
             </a>
             <a href="{{ route('portfolio') }}" class="site-title dot ml-2">{{ setting('portfolio.nick_name') }}</a>
         </div>
@@ -45,7 +44,7 @@
             <div class="header-inner d-flex align-items-start flex-column">
                 <a href="{{ route('portfolio') }}"><img
                         src="{{ Voyager::image(setting('portfolio.mobile_menu_image')) }}"
-                        style="width: 120px;height: 120px;border-radius: 5px;" /></a>
+                        style="max-width:150px;border-radius: 5px;" /></a>
                 <a href="{{ route('portfolio') }}" class="site-title dot mt-3">{{ setting('portfolio.nick_name') }}</a>
                 <span class="site-slogan">{{ setting('portfolio.designation') }}</span>
 

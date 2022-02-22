@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PortfolioContact;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Models\PortfolioFact;
 use App\Models\PortfolioSkill;
+use App\Models\YoutubeContent;
+use App\Models\PortfolioContact;
+use App\Models\PortfolioGallery;
 use App\Models\PortfolioService;
 use App\Models\PortfolioExperience;
-use App\Models\PortfolioFact;
-use App\Models\PortfolioGallery;
-use App\Models\PortfolioGalleryGroup;
 use App\Models\PortfolioTestimonial;
+use App\Models\PortfolioGalleryGroup;
 
 class PortfolioController extends Controller
 {
@@ -31,6 +32,7 @@ class PortfolioController extends Controller
         $portfolio['facts'] = PortfolioFact::cacheData();
         $portfolio['posts'] = Post::cacheData();
         $portfolio['galleryGroup'] = PortfolioGalleryGroup::cacheData();
+        $portfolio['youtubeContents'] = YoutubeContent::cacheData();
 
         return view('welcome', \compact('portfolio'));
     }

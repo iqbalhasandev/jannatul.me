@@ -14,7 +14,6 @@
                     <p class="px-2">
                         {{ $exception->getMessage() ?: 'Whoa, please slow down a bit soI can keep up with your
                         requests.'}}
-                        @if (setting('site.email'))
                         <em>
                             <strong>
                                 If you have any emergency, you can mail us <a
@@ -22,7 +21,6 @@
                                 </a>
                             </strong>
                         </em>
-                        @endif
                     </p>
                     <a class="btn btn-info mt-3" href="{{ back_url() }}">
                         <i class="mdi mdi-reply mr-1"></i>

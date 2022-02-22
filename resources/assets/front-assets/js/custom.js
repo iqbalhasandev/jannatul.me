@@ -130,6 +130,8 @@ $(document).on("ready", function () {
         arrows: false,
         slidesToShow: 2,
         slidesToScroll: 2,
+        autoplay: true,
+        autoplaySpeed: 2000,
         responsive: [
             {
                 breakpoint: 768,
@@ -144,16 +146,18 @@ $(document).on("ready", function () {
     });
 
     $(".clients-wrapper").slick({
-        dots: false,
+        dots: true,
         arrows: false,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
         responsive: [
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                     dots: false,
                     arrows: false,
                 },
