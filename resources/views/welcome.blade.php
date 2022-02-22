@@ -44,7 +44,8 @@
                     </div>
                 </div>
                 @if (setting('portfolio.cv'))
-                <a href="{{ Voyager::image(setting('portfolio.cv')) }}" class="btn btn-default mr-3">
+                <a href="{{ Voyager::image(json_decode(setting('portfolio.cv'))[0]->download_link) }}"
+                    class="btn btn-default mr-3">
                     <i class="icon-cloud-download"></i>
                     Download CV
                 </a>
