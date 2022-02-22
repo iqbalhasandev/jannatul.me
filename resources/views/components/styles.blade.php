@@ -21,10 +21,19 @@
         min-height: 320px;
     }
 
-    :root {
-        --primary: {{  setting('portfolio.portfolio_primary_color', '#6d6e74')}}
+    .youtubeIframe {
+        width: 100%;
+        height: 400px;
+    }
 
-        ;
+    @media only screen and (max-width: 500px) {
+        .youtubeIframe {
+            height: 200px;
+        }
+    }
+
+    :root {
+        --primary: {{setting('portfolio.portfolio_primary_color', '#6d6e74')}} ;
     }
 </style>
 @stack('extra-styles')

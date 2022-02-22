@@ -1,4 +1,5 @@
-$(window).on("load", function () {
+// $(window).on("load", function () {
+$(document).ready(function () {
     const sections = $("section");
     // const navLi = $(".vertical-menu li a");
     window.onscroll = () => {
