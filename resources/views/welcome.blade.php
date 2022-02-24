@@ -160,7 +160,7 @@
 
     <!-- section works -->
     <section id="works" class="shadow-blue white-bg padding">
-        <h3 class="section-title">Portfolio</h3>
+        <h3 class="section-title">Gallery</h3>
         <div class="spacer" data-height="80"></div>
 
         <!-- portfolio filter (desktop) -->
