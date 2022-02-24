@@ -1,5 +1,7 @@
 <!-- STYLESHEETS -->
 <link rel="stylesheet" href="{{ front_asset('css/bootstrap.min.css')}}" type="text/css" media="all">
+<link rel="stylesheet" href="{{ front_asset('libs/Vimeo-Youtube-Video-Popup-Plugin-jQuery/src/video.popup.min.css')}}"
+    type="text/css" media="all">
 <link rel="stylesheet" href="{{ front_asset('css/all.min.css')}}" type="text/css" media="all">
 <link rel="stylesheet" href="{{ front_asset('css/simple-line-icons.min.css')}}" type="text/css" media="all">
 <link rel="stylesheet" href="{{ front_asset('css/slick.min.css')}}" type="text/css" media="all">
@@ -17,23 +19,49 @@
 
 
 <style>
-    .client-item {
-        min-height: 320px;
+    :root {
+        --primary: {{setting('portfolio.portfolio_primary_color', '#6d6e74') }};
     }
 
-    .youtubeIframe {
+    .youtube-thumbnail-box {
         width: 100%;
-        height: 400px;
+        height: 420px;
+        position: relative;
+        margin: 10px 5px;
+        overflow: hidden;
+        cursor: pointer;
     }
 
     @media only screen and (max-width: 500px) {
-        .youtubeIframe {
-            height: 200px;
+        .youtube-thumbnail-box {
+            height: 145px;
         }
     }
+    .youtube-thumbnail-box:hover .youtube-thumbnail-overlay {
+        background: rgb(56 56 56 / 60%);
+    }
 
-    :root {
-        --primary: {{setting('portfolio.portfolio_primary_color', '#6d6e74')}} ;
+    .youtube-thumbnail {
+        width: 100%;
+        border-radius: 5px;
+        position: absolute;
+    }
+
+    .youtube-thumbnail-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgb(56 56 56 / 41%);
+        transition: all ease-out 0.4s;
+    }
+
+    .youtube-thumbnail-box-icon {
+        position: absolute;
+        width: 50px;
+        top: 45%;
+        left: 45%;
     }
 </style>
 @stack('extra-styles')

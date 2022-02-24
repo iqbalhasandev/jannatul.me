@@ -11,14 +11,14 @@
 <body>
 
     <!-- preloader -->
-    <div id="preloader">
+    {{-- <div id="preloader">
         <div class="outer">
             <div class="spinner">
                 <div class="dot1"></div>
                 <div class="dot2"></div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <!-- site wrapper -->
     <div class="site-wrapper">
@@ -74,7 +74,7 @@
                         </li>
                         <li><a href="{{ route('portfolio') }}#works" data-scroll="#works">
                                 <i class="icon-grid"></i>
-                                Works
+                                Gallery
                             </a>
                         </li>
                         <li>

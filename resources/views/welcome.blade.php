@@ -21,7 +21,7 @@
         <h3 class="section-title">About Me</h3>
         <div class="spacer" data-height="80"></div>
 
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-md-3">
                 <img src="{{ Voyager::image(setting('portfolio.about_me_section_image')) }}"
                     style="border-radius:5px;" />
@@ -62,7 +62,7 @@
         <h3 class="section-title">My skills</h3>
         <div class="spacer" data-height="80"></div>
 
-        <p class="mb-0">
+        <p class="mb-0 mt-5">
             {{ setting('portfolio.skill_section_text') }}
         </p>
 
@@ -90,8 +90,7 @@
     </section>
 
     <!-- section facts -->
-    <section id="facts" class="shadow-dark color-white background parallax padding-50"
-        data-image-src="images/background-1.jpg">
+    <section id="facts" class="shadow-dark color-white background parallax padding-50">
 
         <div class="row relative z-1">
 
@@ -117,7 +116,7 @@
         <h3 class="section-title">Services</h3>
         <div class="spacer" data-height="80"></div>
 
-        <div class="row">
+        <div class="row mt-5">
 
             @foreach ($portfolio['services'] as $service)
             <div class="col-md-4 col-sm-6">
@@ -141,7 +140,7 @@
         <div class="spacer" data-height="80"></div>
 
         <!-- timeline -->
-        <div class="timeline">
+        <div class="timeline mt-5">
 
             @foreach ($portfolio['experiences'] as $experience)
             <div class="entry">
@@ -165,8 +164,8 @@
         <div class="spacer" data-height="80"></div>
 
         <!-- portfolio filter (desktop) -->
-        <ul class="portfolio-filter list-inline">
-            <li class="current list-inline-item" data-filter="*">All Projects</li>
+        <ul class="portfolio-filter list-inline mt-5">
+            <li class="current list-inline-item" data-filter="*">All Photo</li>
             @foreach ($portfolio['galleryGroup'] as $group)
             <li class="list-inline-item" data-filter=".{{ $group->name }}">{{ $group->name }}</li>
             @endforeach
@@ -175,7 +174,7 @@
         <!-- portfolio filter (mobile) -->
         <div class="pf-filter-wrapper mb-4">
             <select class="portfolio-filter-mobile">
-                <option value="*">Everything</option>
+                <option value="*">All Photo</option>
                 @foreach ($portfolio['galleryGroup'] as $group)
                 <option value=".{{ $group->name }}">{{ $group->name }}</option>
                 @endforeach
@@ -242,23 +241,34 @@
     <section id="clients" class="shadow-dark background-blue color-white padding-50">
 
         <h3 class="section-title">Youtube Content</h3>
-        <div class="spacer" data-height="80"></div>
+        {{-- <div class="spacer" data-height="80"></div> --}}
 
         <!-- clients wrapper -->
-        <div class="clients-wrapper row">
+        <div class="youtube-wrapper row mt-5">
 
             @foreach ($portfolio['youtubeContents'] as $youtubeContent)
             <div class="col-md-12">
                 <!-- client item -->
-                <div class="client-item">
-                    <iframe class="youtubeIframe" src="{{ $youtubeContent->url }}" title="{{ $youtubeContent->title }}" % frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                <div class="youtube-thumbnail-box youtube-popup" video-url="{{ $youtubeContent->url }}"
+                    title="{{ $youtubeContent->title }}">
+                    <img class=" youtube-thumbnail" src="{{ Voyager::image($youtubeContent->thumbnail) }}">
+                    <div class="youtube-thumbnail-overlay"></div>
+                    <div class="youtube-thumbnail-box-icon">
+                        <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+                            <path class="ytp-large-play-button-bg"
+                                d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+                                fill="#f00"></path>
+                            <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                        </svg>
+                    </div>
                 </div>
             </div>
             @endforeach
 
         </div>
+
+
+
 
     </section>
 
@@ -267,7 +277,7 @@
         <h3 class="section-title">Recent posts</h3>
         <div class="spacer" data-height="80"></div>
 
-        <div class="row">
+        <div class="row mt-5">
 
             @forelse ($portfolio['posts'] as $post)
             <div class="col-md-4">
@@ -303,7 +313,7 @@
         <h3 class="section-title">Get in touch</h3>
         <div class="spacer" data-height="80"></div>
 
-        <div class="row">
+        <div class="row mt-5">
 
             <div class="col-md-4 mb-4 mb-md-0">
                 <!-- contact info -->
@@ -394,5 +404,8 @@
         </div>
 
     </section>
+
+    @push('extra-scripts')
+    @endpush
 
 </x-app-layout>

@@ -176,8 +176,8 @@ header.left {
     color: #FFF;
     background: var(--primary);
     border-radius: 20px;
-    min-height: 620px;
-    max-height: 620px;
+    min-height: 750px;
+    max-height: 750px;
     top: 50px;
     overflow: hidden;
     position: fixed;
