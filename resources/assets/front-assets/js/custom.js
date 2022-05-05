@@ -1,6 +1,6 @@
-$(window).on("load", function () {
-    // $(document).ready(function () {
-    "use strict";
+// $(window).on("load", function () {
+$(document).ready(function () {
+    // "use strict";
     /*=========================================================================
         Preloader
     =========================================================================*/
@@ -41,60 +41,6 @@ $(window).on("load", function () {
         });
     });
 
-    /*=========================================================================
-     Infinite Scroll
-     =========================================================================*/
-    // var curPage = 1;
-    // var pagesNum = $(".portfolio-pagination").find("li a:last").text(); // Number of pages
-
-    // $container.infinitescroll(
-    //     {
-    //         itemSelector: ".grid-item",
-    //         nextSelector: ".portfolio-pagination li a",
-    //         navSelector: ".portfolio-pagination",
-    //         extraScrollPx: 0,
-    //         bufferPx: 0,
-    //         maxPage: 6,
-    //         loading: {
-    //             finishedMsg: "No more works",
-    //             msgText: "",
-    //             speed: "slow",
-    //             selector: ".load-more",
-    //         },
-    //     },
-    // trigger Masonry as a callback
-    //     function (newElements) {
-    //         var $newElems = $(newElements);
-    //         $newElems.imagesLoaded(function () {
-    //             $newElems.animate({ opacity: 1 });
-    //             $container.isotope("appended", $newElems);
-    //         });
-
-    //         // Check last page
-    //         curPage++;
-    //         if (curPage == pagesNum) {
-    //             $(".load-more").remove();
-    //         }
-    //     }
-    // );
-
-    // $container.infinitescroll("unbind");
-
-    // $(".load-more .btn").on("click", function () {
-    //     $container.infinitescroll("retrieve");
-    //     // display loading icon
-    //     $(".load-more .btn i").css("display", "inline-block");
-    //     $(".load-more .btn i").addClass("fa-spin");
-
-    //     $(document).ajaxStop(function () {
-    //         setTimeout(function () {
-    //             // hide loading icon
-    //             $(".load-more .btn i").hide();
-    //         }, 1000);
-    //     });
-    //     return false;
-    // });
-
     /* ======= Mobile Filter ======= */
 
     // bind filter on select change
@@ -121,7 +67,7 @@ $(window).on("load", function () {
 });
 
 $(function () {
-    "use strict";
+    // "use strict";
 
     $(".menu-icon").on("click", function () {
         $("header.left").toggleClass("open");

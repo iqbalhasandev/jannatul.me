@@ -1,5 +1,5 @@
 $(function () {
-    "use strict";
+    // "use strict";
 
     // init the validator
     // validator files are included in the download package

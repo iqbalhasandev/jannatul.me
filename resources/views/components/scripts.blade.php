@@ -10,8 +10,7 @@
 @stack('lib-scripts')
 <script src="{{front_asset('js/slick.min.js')}}"></script>
 <script src="{{front_asset('js/isotope.pkgd.min.js')}}"></script>
-<script src="{{front_asset('js/infinite-scroll.min.js')}}"></script>
-<script src="{{front_asset('js/imagesloaded.pkgd.min.js')}}"></script>
+{{-- <script src="{{front_asset('js/imagesloaded.pkgd.min.js')}}"></script> --}}
 <script src="{{front_asset('js/contact.min.js')}}"></script>
 <script src="{{front_asset('js/validator.min.js')}}"></script>
 <script src="{{front_asset('js/carousels.min.js')}}"></script>

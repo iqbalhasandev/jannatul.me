@@ -2,8 +2,6 @@
             Carousels
 =========================================================================*/
 $(document).on("ready", function () {
-    "use strict";
-
     $(".testimonials-wrapper").slick({
         dots: true,
         arrows: false,
